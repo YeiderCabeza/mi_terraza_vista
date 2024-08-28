@@ -1,0 +1,29 @@
+<p>pago works!</p>
+<div *ngIf="pagos.length > 0; else noData">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Monto</th>
+          <th>RGU ID</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pago of pagos">
+          <td>{{ pago.PAGO_ID }}</td>
+          <td>{{ pago.PAGO_FECHA }}</td>
+          <td>{{ pago.PAGO_MONTO }}</td>
+          <td>{{ pago.PAGO_RGU_ID }}</td>
+          <td>{{ pago.PAGO_DESCRIPCION }}</td>
+          <td>{{ pago.PAGO_ESTADO }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No hay datos disponibles.</p>
+  </ng-template>
+  

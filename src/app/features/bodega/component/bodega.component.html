@@ -1,0 +1,27 @@
+<p>bodega works!</p>
+<div *ngIf="bodegas.length > 0; else noData">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Stock Mínimo</th>
+          <th>Estado</th>
+          <th>Proveedor ID</th>
+          <th>EstadoE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bodega of bodegas">
+          <td>{{ bodega.BOD_ID }}</td>
+          <td>{{ bodega.BOD_STOCK_MINIMO }}</td>
+          <td>{{ bodega.BOD_ESTADO }}</td>
+          <td>{{ bodega.BOD_PROPROV_ID }}</td>
+          <td>{{ bodega.BOD_ESTADOE }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No hay datos disponibles.</p>
+  </ng-template>
+  
