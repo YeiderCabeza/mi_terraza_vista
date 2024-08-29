@@ -1,7 +1,6 @@
 // usuario.component.ts
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service'; // Importa el servicio
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-usuario',
@@ -36,14 +35,5 @@ export class UsuarioComponent implements OnInit {
     // Aquí puedes agregar la lógica para redirigir a una página de edición o abrir un formulario modal
     // Por ejemplo, si quieres redirigir a una página de edición:
     // this.router.navigate(['/editar-usuario', id]);
-  }
-
-  abrirModal(usuario: any): void {
-    this.usuarioSeleccionado = usuario; // Asigna el usuario seleccionado
-    const modalElement = document.getElementById('usuarioModal');
-    if (modalElement) {
-      const modal = new bootstrap.Modal(modalElement); // Usa el objeto de modal de Bootstrap
-      modal.show(); // Muestra el modal
-    }
   }
 }

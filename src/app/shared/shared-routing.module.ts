@@ -4,10 +4,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const routes: Routes = [
 
-  // {
-  //   path: '',
-  //   component: SidebarComponent, // Componente principal para la característica
-  // },
+  {
+    path: '',
+    component: SidebarComponent, // Componente principal para la característica
+  },
 
 ];
 

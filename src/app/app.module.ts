@@ -5,19 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
-    
+    LayoutComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,  
-    HttpClientModule,
-    SharedModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

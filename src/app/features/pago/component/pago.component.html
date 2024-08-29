@@ -1,14 +1,15 @@
-<p>pago works!</p>
-<div *ngIf="pagos.length > 0; else noData">
-    <table>
+
+<div class="container-sm">
+    <h1 class="text-center fs-1" >Modulo de Pagos</h1>
+    <table class="table table-striped">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Fecha</th>
-          <th>Monto</th>
-          <th>RGU ID</th>
-          <th>Descripción</th>
-          <th>Estado</th>
+          <th scope="col">ID</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Monto</th>
+          <th scope="col">RGU ID</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Estado</th>
         </tr>
       </thead>
       <tbody>
@@ -16,14 +17,18 @@
           <td>{{ pago.PAGO_ID }}</td>
           <td>{{ pago.PAGO_FECHA }}</td>
           <td>{{ pago.PAGO_MONTO }}</td>
-          <td>{{ pago.PAGO_RGU_ID }}</td>
+          <td>{{ pago.rguUsuario.RGU_NOMBRES }}</td>
           <td>{{ pago.PAGO_DESCRIPCION }}</td>
           <td>{{ pago.PAGO_ESTADO }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="buscarpagoPorId(pago.PAGO_ID)">Editar</button> <!-- Botón de edición -->
+          </td>
         </tr>
       </tbody>
     </table>
-  </div>
-  <ng-template #noData>
-    <p>No hay datos disponibles.</p>
-  </ng-template>
+  </div>  
+    <div *ngIf="pagos.length === 0">
+      No hay pagos disponibles.
+    </div>
+  
   
