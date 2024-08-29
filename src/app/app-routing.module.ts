@@ -24,6 +24,14 @@ const routes: Routes = [
     path :'pago',
     loadChildren: () => import('./features/pago/pago.module').then(m => m.PagoModule)
   },
+  {
+    path :'pedido',
+    loadChildren: () => import('./features/pedido/pedido.module').then(m => m.PedidoModule)
+  },
+  {
+    path :'proprov',
+    loadChildren: () => import('./features/proprov/proprov.module').then(m => m.ProprovModule)
+  },
   // {
   //   path: 'shared',
   //   loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) // Carga perezosa del módulo Feature1
